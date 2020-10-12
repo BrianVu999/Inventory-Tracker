@@ -6,4 +6,5 @@ Technologies: Java, JavaFX
 Functions
 
 Home
+❮img src="Screenshots/Home.PNG" ❯
 ![](Screenshots/Home.PNG)
