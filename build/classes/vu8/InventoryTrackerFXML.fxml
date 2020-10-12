@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane id="GridPane" prefHeight="400.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vu8.InventoryTrackerFXMLController">
+    <fx:define>
+        <Insets fx:id="nodeMargins" top="5" right="5" bottom="5" left="5" />
+    </fx:define>
+    <top>
+        <GridPane vgap="5" hgap="5">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="21.0" />
+                <ColumnConstraints percentWidth="12.5" />
+                <ColumnConstraints percentWidth="12.5" />
+                <ColumnConstraints percentWidth="12.5" />
+                <ColumnConstraints percentWidth="12.5" />
+                <ColumnConstraints percentWidth="25.0" />
+                <ColumnConstraints percentWidth="4.0" />
+            </columnConstraints>
+            <children>
+                <Label text="Inventory Tracker" GridPane.rowIndex="0" GridPane.columnIndex="2" 
+                       GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets bottom="12.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Item ID:" GridPane.rowIndex="1" GridPane.columnSpan="1"
+                       GridPane.halignment="RIGHT" />
+                <TextField fx:id="txtItemId" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                <Label text="Item Name:" GridPane.rowIndex="2" GridPane.columnSpan="1"
+                       GridPane.halignment="RIGHT" />
+                <TextField fx:id="txtItemName" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="5" />
+                <Label text="Qty-On-Hand:" GridPane.rowIndex="3" GridPane.columnSpan="1"
+                       GridPane.halignment="RIGHT" />
+                <TextField fx:id="txtQOH" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                <Label text="Re-order Point:" GridPane.rowIndex="3" GridPane.columnIndex="3"
+                       GridPane.columnSpan="2" GridPane.halignment="RIGHT" />
+                <TextField fx:id="txtROP" GridPane.rowIndex="3" GridPane.columnIndex="5" GridPane.columnSpan="1"/>
+                <Label text="Sell Price:" GridPane.rowIndex="4" GridPane.columnSpan="1"
+                       GridPane.halignment="RIGHT" />
+                <TextField fx:id="txtSellPrice" GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                <Button fx:id="btnAdd" text="_Add" GridPane.rowIndex="5" GridPane.columnIndex="1" maxWidth="Infinity" onAction="#addButton" mnemonicParsing="true"/>
+                <Button fx:id="btnSave" text="_Save" GridPane.rowIndex="5" GridPane.columnIndex="2" maxWidth="Infinity" onAction="#saveButton" disable="true" mnemonicParsing="true"/>
+                <Button fx:id="btnOrders" text="_Orders" GridPane.rowIndex="5" GridPane.columnIndex="3" maxWidth="Infinity" onAction="#ordersButton" mnemonicParsing="true"/>
+                <Button fx:id="btnExit" text="Exit" GridPane.rowIndex="5" GridPane.columnIndex="4" GridPane.halignment="RIGHT" onAction="#exitButton"/>
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <ListView fx:id="lstOrderList" BorderPane.margin="$nodeMargins" />
+    </center>
+    <bottom>
+        <Label fx:id="lblMessage" GridPane.rowIndex="6" GridPane.columnSpan="7"  />
+    </bottom>
+    
+</BorderPane>
