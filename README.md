@@ -6,4 +6,4 @@ Technologies: Java, JavaFX
 Functions
 
 Home
-![]❮Screenshots/Home.PNG❯
+![](Screenshots/Home.PNG)
