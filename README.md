@@ -6,5 +6,4 @@ Technologies: Java, JavaFX
 Functions
 
 Home
-❮img src="Screenshots/Home.PNG" ❯
-![](Screenshots/Home.PNG)
+❮img src="https://github.com/BrianVu999/Inventory-Tracker/blob/main/Screenshots/Home.PNG" width:200❯
